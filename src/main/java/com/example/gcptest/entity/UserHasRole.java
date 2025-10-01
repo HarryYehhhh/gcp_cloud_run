@@ -21,7 +21,7 @@ public class UserHasRole {
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "uid", nullable = false)
-    private User user;
+    private Member user;
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rid", nullable = false)
@@ -31,7 +31,7 @@ public class UserHasRole {
     @Column(name = "assigned_at", updatable = false)
     private LocalDateTime assignedAt;
     
-    public UserHasRole(User user, Role role) {
+    public UserHasRole(Member user, Role role) {
         this.user = user;
         this.role = role;
     }

@@ -30,7 +30,7 @@ public class Role {
     private LocalDateTime createdAt;
     
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private Set<User> users = new HashSet<>();
+    private Set<Member> users = new HashSet<>();
     
     public Role(String rid, String roleName, String description) {
         this.rid = rid;

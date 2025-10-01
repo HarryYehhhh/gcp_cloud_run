@@ -16,7 +16,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "uid")
@@ -44,7 +44,7 @@ public class User {
     )
     private Set<Role> roles = new HashSet<>();
     
-    public User(String account, String password) {
+    public Member(String account, String password) {
         this.account = account;
         this.password = password;
     }
